@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahlzeiten-Feed</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <div class="header">
+        <h1>Mahlzeiten</h1>
+        <div class="menu" id="menu">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+        </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <div id="sideMenu" class="side-menu">
+        <span class="close-btn" id="closeBtn">&times;</span>
+        <a class="menuBtn" href="#" data-target="a.html"><strong>IN ENTWICKLUNG...</strong></a>
+       
+    </div>
+
+  
+<div class="popup4">
+   <h4>
+    Name und Foto 
+        <br> sind notwendig!</h4>
+</div>
+
+   
+
+    <div class="meal-form">
+        <input class="name-form" type="text" id="name" placeholder="Dein Name" list="nameList" required>
+        <datalist id="nameList">
+            <option value="Ferdinand Birnkkötter">
+            <option value="Benedikt Porsch">
+            <option value="Achim Müller">
+        </datalist>
+        <div class="labless" style="display: flex; align-items: center;">
+            <label>
+                <input type="file" id="image-upload" accept="image/*" hidden>
+                <img class="pic-img" src="image.png" style="cursor: pointer;">
+            </label>
+            <h6 style="margin-left: 10px;">Bild aufnehmen oder hinzufügen</h6>
+        </div>
+        <button id="save-btn">Mahlzeit hinzufügen</button>
+    </div>
+    <div id="feed" class="feed">
+        <!-- Hier wird der Feed der geposteten Mahlzeiten angezeigt -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

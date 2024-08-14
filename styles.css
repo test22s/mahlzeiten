@@ -1,0 +1,238 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color:  white;
+    margin: 15px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1.23px solid rgb(99, 99, 99);
+    padding: 10px;
+    border-radius: 9px;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-top: 20px;
+    margin-left: 22px;
+}
+
+.meal-form {
+    margin: 20px;
+    
+    align-items: center;
+}
+
+.meal-form input {
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 16px;
+   
+}
+
+.name-form{
+    border: 2.5px solid black;
+    border-radius: 4px;
+    background-color: white;
+   
+   
+}
+
+.popup4 {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    transition: ease-in-out;
+    background-color: rgb(255, 255, 255);
+    color: #1e4e76;
+    padding: 10px ;
+    border: 2.4px solid #1e4e76;
+    border-radius: 9px;
+    z-index: 1000;
+}
+
+
+
+
+ .labelss{
+    display: flex;
+    flex-direction: row;
+    margin: 14px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h6{
+    display: flex;
+    margin-bottom: 20px;
+    margin-left: 12px;
+    max-width: 15%;
+}
+
+.pic-img{
+    height: 40px;
+    border: 2.3px solid rgb(91, 91, 91);
+    border-radius: 6px;
+    padding: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+}
+
+.meal-form button {
+    padding: 10px 20px;
+    background-color: #1e4e76;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.meal-form button:hover {
+    transition: ease-in-out;
+    background-color: aliceblue;
+    color: black;
+    border: 2px solid #1e4e76;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.feed {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.feed-item {
+    background-color: white;
+    margin: 10px 0;
+    margin-top: 24px;
+    padding: 14px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+
+.feed-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.085);
+    border-radius: 9px;
+}
+
+.feed-item h3 {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.menu {
+    cursor: pointer;
+    margin-right: 10px;
+}
+.menu-line {
+    margin: 10px;
+    margin-right: 10px;
+    width: 25px;
+    height: 1px;
+    background-color: #0e0e0e;
+    margin: 4px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+   
+    border: none;
+    padding: 2px 2px;
+    border-radius: 9px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.menu-line:hover {
+    background-color: #1c8cd7;
+}
+
+.overlay {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.overlay.active {
+    display: block; 
+}
+
+.side-menu {
+    border-radius: 10px;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 80px;
+    z-index: 10000;
+}
+
+.menuBtn {
+    padding: 10px 10px;
+    text-decoration: none;
+    margin-bottom: 12px;
+    border: 1px solid rgb(234, 232, 232);
+    border-radius: 9px;
+    background-color: rgb(234, 232, 232);
+    margin-right: 28px;
+    margin-left: 10px;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    color: black;
+    display: block;
+    transition: 0.3s;
+    font-family: sans-serif;
+}
+
+.side-menu a:hover {
+    background-color: #6e71724f; 
+}  
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: black;
+    cursor: pointer;
+}
+
+.meal-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.meal-item {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 100px; /* Verkleinerte Breite für mehrere Mahlzeiten am selben Tag */
+}
+
+.meal-item img {
+    width: 100%;
+    height: auto;
+}
