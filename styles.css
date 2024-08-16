@@ -26,6 +26,22 @@ h1 {
     margin-left: 22px;
 }
 
+.success-popup {
+    display: none;
+    position: fixed;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4BB543;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    
+    transition: top 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
 .meal-form {
     margin: 20px;
     
