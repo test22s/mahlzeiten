@@ -25,6 +25,13 @@ h1 {
      font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
+.icon-header{
+    height: 36px;
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
 .success-popup {
     display: none;
     position: fixed;
