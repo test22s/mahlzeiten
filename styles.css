@@ -6,9 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1.23px solid rgb(99, 99, 99);
-    padding: 10px;
-    border-radius: 9px;
+   
 }
 
 .header {
@@ -252,3 +250,51 @@ h6{
     width: 100%;
     height: auto;
 }
+
+.topbtns{
+    display: flex;
+    text-align: center;
+}
+
+.topbtns .btn1{
+   background: none;
+   border: none;
+   border-radius: 6px;
+   padding: 10px;
+   color: black;
+   margin-top: 0px;
+   margin: 10px;
+   font-weight: bolder;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+   text-shadow: 5px rgba(0, 0, 0, 0.1);
+}
+
+.topbtns .btn2{
+    background: none;
+   border: none;
+   border-radius: 6px;
+   padding: 10px;
+   color: black;
+   margin-top: 0px;
+   margin: 10px;
+   font-weight: bolder;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+   text-shadow: 5px rgba(0, 0, 0, 0.1);
+}
+
+.topbtns button:hover{
+    background: #0e0e0e;
+    color: white;
+    font-weight: bolder;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+   text-shadow: 5px rgba(223, 221, 221, 0.1);
+}
+
+.topbtns button:active{
+    background: #0e0e0e;
+    color: white;
+    font-weight: bolder;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+   text-shadow: 5px rgba(223, 221, 221, 0.1);
+}
+
