@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 };
                 saveMeal(meal);
                 addMealToFeed(meal);
+                showSuccessPopup();
                 clearForm();
             };
             reader.readAsDataURL(imageUpload);
@@ -51,6 +52,15 @@ document.addEventListener("DOMContentLoaded", function() {
         feedItem.appendChild(mealName);
         feedItem.appendChild(mealImage);
         feed.prepend(feedItem); // Das neue Item oben hinzufügen
+    }
+
+      function showSuccessPopup() {
+        const successPopup = document.getElementById('successPopup');
+        successPopup.style.display = 'block';
+        successPopup.style.top = '20px';
+        setTimeout(() => {
+            successPopup.style.top = '-50px';
+        }, 1600);
     }
 
     function clearForm() {
