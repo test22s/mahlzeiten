@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
         feedItem.className = "feed-item";
 
         const mealName = document.createElement("h3");
-        mealName.textContent = meal.name;
+        mealName.textContent = "✪ "+ meal.name;
 
         const mealImage = document.createElement("img");
         mealImage.src = meal.image;
