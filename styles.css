@@ -24,11 +24,11 @@ h1 {
     margin-left: 22px;
      font-family: Verdana, Arial, Helvetica, sans-serif;
     text-algin: center;
-    font-size: smaller;
+    
 }
 
 .icon-header{
-    height: 31px;
+    height: 31.7px;
     margin-top: 15px;
     margin-left: 20px;
     margin-bottom: 10px;
@@ -54,7 +54,7 @@ h1 {
     border-radius: 10px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
     z-index: 1000;
-    
+    transition: 0.3s ease-in-out;
     transition: top 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
@@ -93,6 +93,7 @@ h1 {
     border: 2.4px solid #1e4e76;
     border-radius: 9px;
     z-index: 1000;
+    transition: 0.34s ease-in-out;
 }
 
 
@@ -135,10 +136,11 @@ h6{
 
 .meal-form button:hover {
     transition: ease-in-out;
-    background-color: aliceblue;
+    background-color: white;
     color: black;
     border: 2px solid #1e4e76;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    transition: 0.2s ease-in-out;
 }
 
 .feed {
