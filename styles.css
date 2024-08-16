@@ -20,23 +20,28 @@ body {
 }
 
 h1 {
+     font-size: 32px;
+
     margin-top: 20px;
-    margin-left: 22px;
-     font-family: Verdana, Arial, Helvetica, sans-serif;
-    text-algin: center;
+   
+    text-align: center;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
     
 }
 
 .icon-header{
-    height: 31.7px;
+    height: 30.4px;
     margin-top: 15px;
     margin-left: 20px;
     margin-bottom: 10px;
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 4px;
 }
 
 .icon-header:hover{
-     background-color: rgb(206, 207, 207);
-    padding: 4.5px;
+     background-color: rgba(206, 207, 207, 0.726);
+    padding: 7px;
     border: none;
     border-radius: 50%;
     transition: 0.2s ease-in-out;
