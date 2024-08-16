@@ -23,10 +23,12 @@ h1 {
     margin-top: 20px;
     margin-left: 22px;
      font-family: Verdana, Arial, Helvetica, sans-serif;
+    text-algin: center;
+    font-size: smaller;
 }
 
 .icon-header{
-    height: 36px;
+    height: 31px;
     margin-top: 15px;
     margin-left: 20px;
     margin-bottom: 10px;
