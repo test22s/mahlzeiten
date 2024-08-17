@@ -30,11 +30,11 @@ h1 {
 }
 
 .icon-header{
-    height: 31px;
+    height: 29.4px;
     margin-top: 15px;
     margin-left: 20px;
-    margin-bottom: 12.6px;
-    border: 1.5px solid black;
+    margin-bottom: 14.6px;
+    border: 1.7px solid black;
     border-radius: 6px;
     padding: 5px 5px;
    
@@ -68,11 +68,13 @@ h1 {
     display: block;
     top: 20px; /* Zeigt das Popup in der Nähe des oberen Bildschirmrands */
     opacity: 1; /* Popup sichtbar machen */
+    transition: 0.6s ease-in-out;
 }
 
 .success-popup.hide {
     top: -100px; /* Bewegt das Popup weiter nach oben, sodass es verschwindet */
     opacity: 0; /* Popup wieder ausblenden */
+    transition: 0.6s ease-in-out;
 }
 
 
@@ -185,7 +187,7 @@ h6{
 
 .delete-btn {
     background: none;
-    border: 1.5px solid black;
+    border: 1.5px solid grey;
     border-radius: 6px;
     
     margin-top: 12px;
