@@ -65,7 +65,14 @@ document.addEventListener("DOMContentLoaded", function() {
         feedItem.appendChild(mealName);
         feedItem.appendChild(mealImage);
         feedItem.appendChild(deleteBtn);
-        feed.prepend(feedItem); // Das neue Item oben hinzufügen
+
+        feedItem.classList.add('hidden'); // Füge die Klasse 'hidden' hinzu
+    feed.prepend(feedItem); // Das neue Item oben hinzufügen
+
+    // Warte einen kurzen Moment und entferne dann die 'hidden'-Klasse, um die Transition auszulösen
+    setTimeout(() => {
+        feedItem.classList.remove('hidden');
+    }, 10);
     }
 
     function deleteMeal(id, feedItem) {
