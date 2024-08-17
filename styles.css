@@ -30,12 +30,12 @@ h1 {
 }
 
 .icon-header{
-    height: 29.4px;
+    height: 29px;
     margin-top: 15px;
     margin-left: 20px;
     margin-bottom: 14.6px;
-    border: 1.7px solid black;
-    border-radius: 6px;
+    border: 1.8px solid black;
+    border-radius: 4px;
     padding: 5px 5px;
    
 }
@@ -141,6 +141,7 @@ h6{
     padding: 5px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     display: flex;
+    transition: 0.3s easy-in-out;
 }
 
 .meal-form button {
@@ -177,6 +178,7 @@ h6{
     padding: 14px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
     border-radius: 5px;
+    transition: 0.3s ease-in-out;
 }
 
 .meal-header {
@@ -187,7 +189,7 @@ h6{
 
 .delete-btn {
     background: none;
-    border: 1.5px solid grey;
+    border: 1.5px solid #a19f9f;
     border-radius: 6px;
     
     margin-top: 12px;
