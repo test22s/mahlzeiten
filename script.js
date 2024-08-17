@@ -54,14 +54,20 @@ document.addEventListener("DOMContentLoaded", function() {
         feed.prepend(feedItem); // Das neue Item oben hinzufügen
     }
 
-      function showSuccessPopup() {
-        const successPopup = document.getElementById('successPopup');
-        successPopup.style.display = 'block';
-        successPopup.style.top = '20px';
-        setTimeout(() => {
-            successPopup.style.top = '-50px';
-        }, 1600);
-    }
+  function showSuccessPopup() {
+    const successPopup = document.getElementById('successPopup');
+    successPopup.classList.add('show');
+
+    setTimeout(() => {
+        successPopup.classList.remove('show');
+        successPopup.classList.add('hide');
+    }, 1600);
+
+    setTimeout(() => {
+        successPopup.classList.remove('hide');
+    }, 2200);
+}
+
 
     function clearForm() {
         document.getElementById("name").value = "";
