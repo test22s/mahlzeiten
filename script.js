@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
         feedItem.className = "feed-item";
 
         const mealName = document.createElement("h3");
-        mealName.textContent = "✪ "+ meal.name;
+        mealName.textContent = "✪ " + meal.name;
 
         const mealImage = document.createElement("img");
         mealImage.src = meal.image;
@@ -54,20 +54,19 @@ document.addEventListener("DOMContentLoaded", function() {
         feed.prepend(feedItem); // Das neue Item oben hinzufügen
     }
 
-  function showSuccessPopup() {
-    const successPopup = document.getElementById('successPopup');
-    successPopup.classList.add('show');
+    function showSuccessPopup() {
+        const successPopup = document.getElementById('successPopup');
+        successPopup.classList.add('show');
 
-    setTimeout(() => {
-        successPopup.classList.remove('show');
-        successPopup.classList.add('hide');
-    }, 1600);
+        setTimeout(() => {
+            successPopup.classList.remove('show');
+            successPopup.classList.add('hide');
+        }, 1600);
 
-    setTimeout(() => {
-        successPopup.classList.remove('hide');
-    }, 2200);
-}
-
+        setTimeout(() => {
+            successPopup.classList.remove('hide');
+        }, 2200);
+    }
 
     function clearForm() {
         document.getElementById("name").value = "";
