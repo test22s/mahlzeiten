@@ -57,9 +57,21 @@ h1 {
     border-radius: 10px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
     z-index: 1000;
-    transition: 0.3s ease-in-out;
-    transition: top 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0; /* Anfangs nicht sichtbar */
+    transition: top 0.6s ease-in-out, opacity 0.6s ease-in-out;
 }
+
+.success-popup.show {
+    display: block;
+    top: 20px; /* Zeigt das Popup in der Nähe des oberen Bildschirmrands */
+    opacity: 1; /* Popup sichtbar machen */
+}
+
+.success-popup.hide {
+    top: -100px; /* Bewegt das Popup weiter nach oben, sodass es verschwindet */
+    opacity: 0; /* Popup wieder ausblenden */
+}
+
 
 .meal-form {
     margin: 20px;
