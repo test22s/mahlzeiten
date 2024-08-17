@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const reader = new FileReader();
             reader.onload = function(e) {
                 const meal = {
+                    id: Date.now(), // Eindeutige ID für jede Mahlzeit
                     name: nameInput,
                     image: e.target.result,
                 };
@@ -39,19 +40,39 @@ document.addEventListener("DOMContentLoaded", function() {
         meals.forEach(addMealToFeed);
     }
 
+
+
     function addMealToFeed(meal) {
         const feedItem = document.createElement("div");
         feedItem.className = "feed-item";
+        feedItem.dataset.id = meal.id;
 
         const mealName = document.createElement("h3");
         mealName.textContent = "✪ " + meal.name;
 
+        const deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "🗑";
+        deleteBtn.className = "delete-btn";
+        deleteBtn.addEventListener("click", function() {
+            deleteMeal(meal.id, feedItem);
+        });
+
         const mealImage = document.createElement("img");
         mealImage.src = meal.image;
 
+      
+
         feedItem.appendChild(mealName);
         feedItem.appendChild(mealImage);
+        feedItem.appendChild(deleteBtn);
         feed.prepend(feedItem); // Das neue Item oben hinzufügen
+    }
+
+    function deleteMeal(id, feedItem) {
+        let meals = JSON.parse(localStorage.getItem("meals")) || [];
+        meals = meals.filter(meal => meal.id !== id);
+        localStorage.setItem("meals", JSON.stringify(meals));
+        feed.removeChild(feedItem);
     }
 
     function showSuccessPopup() {
@@ -109,4 +130,5 @@ document.querySelectorAll('.menuBtn').forEach(function(btn) {
         }, 300);
     });
 });
+
 
