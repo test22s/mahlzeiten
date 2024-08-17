@@ -53,6 +53,7 @@ h1 {
     position: fixed;
     top: -70px;
     left: 50%;
+    min-width: 64%
     transform: translateX(-50%);
     background-color: #4BB543;
     color: white;
