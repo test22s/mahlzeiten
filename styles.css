@@ -34,6 +34,9 @@ h1 {
     margin-top: 15px;
     margin-left: 20px;
     margin-bottom: 12.6px;
+    border: 1.5px solid black;
+    border-radius: 6px;
+    padding: 5px 5px;
    
 }
 
@@ -164,6 +167,7 @@ h6{
     margin-top: 20px;
 }
 
+
 .feed-item {
     background-color: white;
     margin: 10px 0;
@@ -172,6 +176,38 @@ h6{
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
     border-radius: 5px;
 }
+
+.meal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-btn {
+    background: none;
+    border: 1.5px solid black;
+    border-radius: 6px;
+    
+    margin-top: 12px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #f2f2f2;
+    border: none;
+    border-radius: 50%;
+}
+
+.feed-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
 
 .feed-item img {
     max-width: 100%;
@@ -317,6 +353,15 @@ h6{
    text-shadow: 5px rgba(0, 0, 0, 0.1);
 }
 
+.delete-card {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #a19f9f;
+}
+
 .topbtns button:hover{
     background: #0e0e0e;
     color: white;
@@ -334,4 +379,3 @@ h6{
    text-shadow: 5px rgba(223, 221, 221, 0.1);
     transition: 0.24s ease-in-out;
 }
-
