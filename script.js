@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         setTimeout(() => {
             successPopup.classList.remove('hide');
-        }, 2200);
+        }, 1800);
     }
 
     function clearForm() {
