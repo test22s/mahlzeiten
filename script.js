@@ -40,8 +40,6 @@ document.addEventListener("DOMContentLoaded", function() {
         meals.forEach(addMealToFeed);
     }
 
-
-
     function addMealToFeed(meal) {
         const feedItem = document.createElement("div");
         feedItem.className = "feed-item";
@@ -60,19 +58,17 @@ document.addEventListener("DOMContentLoaded", function() {
         const mealImage = document.createElement("img");
         mealImage.src = meal.image;
 
-      
-
         feedItem.appendChild(mealName);
         feedItem.appendChild(mealImage);
         feedItem.appendChild(deleteBtn);
 
         feedItem.classList.add('hidden'); // Füge die Klasse 'hidden' hinzu
-    feed.prepend(feedItem); // Das neue Item oben hinzufügen
+        feed.prepend(feedItem); // Das neue Item oben hinzufügen
 
-    // Warte einen kurzen Moment und entferne dann die 'hidden'-Klasse, um die Transition auszulösen
-    setTimeout(() => {
-        feedItem.classList.remove('hidden');
-    }, 10);
+        // Warte einen kurzen Moment und entferne dann die 'hidden'-Klasse, um die Transition auszulösen
+        setTimeout(() => {
+            feedItem.classList.remove('hidden');
+        }, 10);
     }
 
     function deleteMeal(id, feedItem) {
@@ -84,16 +80,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function showSuccessPopup() {
         const successPopup = document.getElementById('successPopup');
-        successPopup.classList.add('show');
+        successPopup.classList.add('show', 'slide-in');
 
         setTimeout(() => {
-            successPopup.classList.remove('show');
-            successPopup.classList.add('hide');
+            successPopup.classList.remove('slide-in');
+            successPopup.classList.add('slide-out');
         }, 1600);
 
         setTimeout(() => {
-            successPopup.classList.remove('hide');
-        }, 1800);
+            successPopup.classList.remove('show', 'slide-out');
+        }, 2000);
     }
 
     function clearForm() {
@@ -103,11 +99,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function showErrorPopup() {
         const popup = document.querySelector(".popup4");
-        popup.style.display = "block"; // Popup anzeigen
+        popup.classList.add('show', 'slide-in');
 
         setTimeout(() => {
-            popup.style.display = "none"; // Popup nach kurzer Zeit wieder ausblenden
-        }, 720);
+            popup.classList.remove('slide-in');
+            popup.classList.add('slide-out');
+        }, 1600);
+
+        setTimeout(() => {
+            popup.classList.remove('show', 'slide-out');
+        }, 2000);
     }
 });
 
@@ -137,5 +138,3 @@ document.querySelectorAll('.menuBtn').forEach(function(btn) {
         }, 300);
     });
 });
-
-
