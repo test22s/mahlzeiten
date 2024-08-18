@@ -52,6 +52,14 @@ body {
         transform: translateY(-100% -50%);
         opacity: 0;
     }
+      0% {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(-50%);
+        opacity: 1;
+    }
 }
 
 
@@ -106,7 +114,7 @@ h1 {
     left: 50%;
    
     transform: translateX(-50%);
-    background-color: #4BB543;
+    background-color: red;
     color: white;
     padding: 10px 20px;
     border-radius: 10px;
@@ -152,20 +160,35 @@ h1 {
 }
 
 .popup4 {
+  
     display: none;
     position: fixed;
-    top: 50%;
+    top: -70px;
     left: 50%;
-    transform: translate(-50%, -50%);
+   
+    transform: translateX(-50%);
+    background-color: #4BB543;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
-    transition: ease-in-out;
-    background-color: rgb(255, 255, 255);
-    color: #1e4e76;
-    padding: 10px ;
-    border: 2.4px solid #1e4e76;
-    border-radius: 9px;
     z-index: 1000;
-    transition: 0.34s ease-in-out;
+    opacity: 0; /* Anfangs nicht sichtbar */
+    transition: top 0.6s ease-in-out, opacity 0.6s ease-in-out;
+
+}
+
+.popup4.show {
+    display: block;
+    top: 20px; /* Zeigt das Popup in der Nähe des oberen Bildschirmrands */
+    opacity: 1; /* Popup sichtbar machen */
+    transition: 0.6s ease-in-out;
+}
+
+.popup4.hide {
+    top: -100px; /* Bewegt das Popup weiter nach oben, sodass es verschwindet */
+    opacity: 0; /* Popup wieder ausblenden */
+    transition: 0.6s ease-in-out;
 }
 
 
